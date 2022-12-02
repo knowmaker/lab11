@@ -1,0 +1,7 @@
+<h3>Добро пожаловать на страницу перевода чисел</h3>
+<%= form_tag("/translate/output.x", :method => "get") do %>
+  <%= label_tag("Введите число:") %>
+  <%= number_field_tag(:ch, nil, min: 0, step: 1)%> <br/>
+  <p>Вывести всю БД: <%= check_box(:get_database, "checked") %></p>
+  <%= submit_tag("Translate") %>
+<% end %>
